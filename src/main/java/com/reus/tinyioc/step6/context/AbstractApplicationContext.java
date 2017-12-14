@@ -1,10 +1,10 @@
 package com.reus.tinyioc.step6.context;
 
-
 import com.reus.tinyioc.step6.beans.factory.AbstractBeanFactory;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AbstractApplicationContext.java, v 0.1 2017-12-14 reus Exp $
  */
 public abstract class AbstractApplicationContext implements ApplicationContext {
     protected AbstractBeanFactory beanFactory;
@@ -13,7 +13,7 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
         this.beanFactory = beanFactory;
     }
 
-    public void refresh() throws Exception{
+    public void refresh() throws Exception {
     }
 
     @Override

@@ -6,7 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AspectJExpressionPointcutTest.java, v 0.1 2017-12-14 reus Exp $
  */
 public class AspectJExpressionPointcutTest {
 

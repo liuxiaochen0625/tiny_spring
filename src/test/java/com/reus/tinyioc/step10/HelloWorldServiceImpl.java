@@ -1,16 +1,17 @@
 package com.reus.tinyioc.step10;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: BeanDefinition.java, v 0.1 2017-12-14 reus Exp $
  */
 public class HelloWorldServiceImpl implements HelloWorldService {
 
-    private String text;
+    private String        text;
 
     private OutputService outputService;
 
     @Override
-    public void helloWorld(){
+    public void helloWorld() {
         outputService.output(text);
     }
 

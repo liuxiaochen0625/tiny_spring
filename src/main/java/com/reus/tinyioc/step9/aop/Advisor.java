@@ -3,7 +3,8 @@ package com.reus.tinyioc.step9.aop;
 import org.aopalliance.aop.Advice;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: Advisor.java, v 0.1 2017-12-14 reus Exp $
  */
 public interface Advisor {
 

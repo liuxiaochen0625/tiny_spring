@@ -1,7 +1,8 @@
 package com.reus.tinyioc.step10;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: BeanReference.java, v 0.1 2017-12-14 reus Exp $
  */
 public class BeanReference {
 

@@ -1,8 +1,10 @@
 package com.reus.tinyioc.step1;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: BeanDefinition.java, v 0.1 2017-12-14 reus Exp $
  */
+
 public class BeanDefinition {
 
     private Object bean;

@@ -8,9 +8,8 @@ import com.reus.tinyioc.step5.PropertyValue;
 import java.lang.reflect.Field;
 
 /**
- * 可自动装配内容的BeanFactory
- * 
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AutowireCapableBeanFactory.java, v 0.1 2017-12-14 reus Exp $
  */
 public class AutowireCapableBeanFactory extends AbstractBeanFactory {
 

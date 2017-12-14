@@ -7,13 +7,14 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: ResourceLoaderTest.java, v 0.1 2017-12-14 reus Exp $
  */
 public class ResourceLoaderTest {
 
-	@Test
-	public void test() throws IOException {
-		ResourceLoader resourceLoader = new ResourceLoader();
+    @Test
+    public void test() throws IOException {
+        ResourceLoader resourceLoader = new ResourceLoader();
         Resource resource = resourceLoader.getResource("tinyioc7.xml");
         InputStream inputStream = resource.getInputStream();
         Assert.assertNotNull(inputStream);

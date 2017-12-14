@@ -1,15 +1,16 @@
 package com.reus.tinyioc.step5;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: HelloWorldService.java, v 0.1 2017-12-14 reus Exp $
  */
 public class HelloWorldService {
 
-    private String text;
+    private String        text;
 
     private OutputService outputService;
 
-    public void helloWorld(){
+    public void helloWorld() {
         outputService.output(text);
     }
 

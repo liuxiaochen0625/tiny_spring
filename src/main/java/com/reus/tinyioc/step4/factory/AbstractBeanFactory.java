@@ -6,7 +6,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AbstractBeanFactory.java, v 0.1 2017-12-14 reus Exp $
  */
 public abstract class AbstractBeanFactory implements BeanFactory {
 

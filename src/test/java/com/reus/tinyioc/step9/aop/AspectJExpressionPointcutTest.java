@@ -6,7 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AspectJExpressionPointcutTest.java, v 0.1 2017-12-14 reus Exp $
  */
 public class AspectJExpressionPointcutTest {
 
@@ -15,7 +16,8 @@ public class AspectJExpressionPointcutTest {
         String expression = "execution(* com.reus.tinyioc.step9.*.*(..))";
         AspectJExpressionPointcut aspectJExpressionPointcut = new AspectJExpressionPointcut();
         aspectJExpressionPointcut.setExpression(expression);
-        boolean matches = aspectJExpressionPointcut.getClassFilter().matches(HelloWorldService.class);
+        boolean matches = aspectJExpressionPointcut.getClassFilter()
+            .matches(HelloWorldService.class);
         Assert.assertTrue(matches);
     }
 
@@ -24,7 +26,9 @@ public class AspectJExpressionPointcutTest {
         String expression = "execution(* com.reus.tinyioc.step9.*.*(..))";
         AspectJExpressionPointcut aspectJExpressionPointcut = new AspectJExpressionPointcut();
         aspectJExpressionPointcut.setExpression(expression);
-        boolean matches = aspectJExpressionPointcut.getMethodMatcher().matches(HelloWorldServiceImpl.class.getDeclaredMethod("helloWorld"),HelloWorldServiceImpl.class);
+        boolean matches = aspectJExpressionPointcut.getMethodMatcher().matches(
+            HelloWorldServiceImpl.class.getDeclaredMethod("helloWorld"),
+            HelloWorldServiceImpl.class);
         Assert.assertTrue(matches);
     }
 }

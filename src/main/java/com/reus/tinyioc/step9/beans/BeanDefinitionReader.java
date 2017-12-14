@@ -1,8 +1,8 @@
 package com.reus.tinyioc.step9.beans;
 
 /**
- * 从配置中读取BeanDefinition
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: BeanDefinitionReader.java, v 0.1 2017-12-14 reus Exp $
  */
 public interface BeanDefinitionReader {
 

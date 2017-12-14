@@ -5,24 +5,24 @@ import org.aopalliance.aop.Advice;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
-
 import java.lang.reflect.Method;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AspectJAroundAdvice.java, v 0.1 2017-12-14 reus Exp $
  */
 public class AspectJAroundAdvice implements Advice, MethodInterceptor {
 
-	private BeanFactory beanFactory;
+    private BeanFactory beanFactory;
 
-	private Method aspectJAdviceMethod;
+    private Method      aspectJAdviceMethod;
 
-	private String aspectInstanceName;
+    private String      aspectInstanceName;
 
-	@Override
-	public Object invoke(MethodInvocation invocation) throws Throwable {
+    @Override
+    public Object invoke(MethodInvocation invocation) throws Throwable {
         return aspectJAdviceMethod.invoke(beanFactory.getBean(aspectInstanceName), invocation);
-	}
+    }
 
     public BeanFactory getBeanFactory() {
         return beanFactory;

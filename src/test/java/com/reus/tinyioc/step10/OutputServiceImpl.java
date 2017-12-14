@@ -1,14 +1,15 @@
 package com.reus.tinyioc.step10;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: OutputServiceImpl.java, v 0.1 2017-12-14 reus Exp $
  */
 public class OutputServiceImpl implements OutputService {
 
     private HelloWorldService helloWorldService;
 
     @Override
-    public void output(String text){
+    public void output(String text) {
         System.out.println(text);
     }
 

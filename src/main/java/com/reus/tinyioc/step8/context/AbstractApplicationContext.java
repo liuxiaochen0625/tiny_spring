@@ -6,7 +6,8 @@ import com.reus.tinyioc.step8.beans.factory.AbstractBeanFactory;
 import java.util.List;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AbstractApplicationContext.java, v 0.1 2017-12-14 reus Exp $
  */
 public abstract class AbstractApplicationContext implements ApplicationContext {
     protected AbstractBeanFactory beanFactory;

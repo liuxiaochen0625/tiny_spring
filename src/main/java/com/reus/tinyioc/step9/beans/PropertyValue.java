@@ -1,8 +1,8 @@
 package com.reus.tinyioc.step9.beans;
 
 /**
- * 用于bean的属性注入
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: PropertyValue.java, v 0.1 2017-12-14 reus Exp $
  */
 public class PropertyValue {
 

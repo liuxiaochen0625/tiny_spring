@@ -7,9 +7,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * 基于jdk的动态代理
- * 
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: JdkDynamicAopProxy.java, v 0.1 2017-12-14 reus Exp $
  */
 public class JdkDynamicAopProxy extends AbstractAopProxy implements InvocationHandler {
 
@@ -17,21 +16,23 @@ public class JdkDynamicAopProxy extends AbstractAopProxy implements InvocationHa
         super(advised);
     }
 
-	@Override
-	public Object getProxy() {
-		return Proxy.newProxyInstance(getClass().getClassLoader(), advised.getTargetSource().getInterfaces(), this);
-	}
+    @Override
+    public Object getProxy() {
+        return Proxy.newProxyInstance(getClass().getClassLoader(),
+            advised.getTargetSource().getInterfaces(), this);
+    }
 
-	@Override
-	public Object invoke(final Object proxy, final Method method, final Object[] args) throws Throwable {
-		MethodInterceptor methodInterceptor = advised.getMethodInterceptor();
-		if (advised.getMethodMatcher() != null
-				&& advised.getMethodMatcher().matches(method, advised.getTargetSource().getTarget().getClass())) {
-			return methodInterceptor.invoke(new ReflectiveMethodInvocation(advised.getTargetSource().getTarget(),
-					method, args));
-		} else {
-			return method.invoke(advised.getTargetSource().getTarget(), args);
-		}
-	}
+    @Override
+    public Object invoke(final Object proxy, final Method method,
+                         final Object[] args) throws Throwable {
+        MethodInterceptor methodInterceptor = advised.getMethodInterceptor();
+        if (advised.getMethodMatcher() != null && advised.getMethodMatcher().matches(method,
+            advised.getTargetSource().getTarget().getClass())) {
+            return methodInterceptor.invoke(new ReflectiveMethodInvocation(
+                advised.getTargetSource().getTarget(), method, args));
+        } else {
+            return method.invoke(advised.getTargetSource().getTarget(), args);
+        }
+    }
 
 }

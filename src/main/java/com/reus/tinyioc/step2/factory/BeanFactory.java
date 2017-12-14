@@ -1,10 +1,10 @@
 package com.reus.tinyioc.step2.factory;
 
-
 import com.reus.tinyioc.step2.BeanDefinition;
 
 /**
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: BeanFactory.java, v 0.1 2017-12-14 reus Exp $
  */
 public interface BeanFactory {
 

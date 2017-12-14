@@ -6,15 +6,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 从配置中读取BeanDefinition
- * 
- * @author yihua.huang@dianping.com
+ * @author reus
+ * @version $Id: AbstractBeanDefinitionReader.java, v 0.1 2017-12-14 reus Exp $
  */
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader {
 
-    private Map<String,BeanDefinition> registry;
+    private Map<String, BeanDefinition> registry;
 
-    private ResourceLoader resourceLoader;
+    private ResourceLoader              resourceLoader;
 
     protected AbstractBeanDefinitionReader(ResourceLoader resourceLoader) {
         this.registry = new HashMap<String, BeanDefinition>();
