@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="outputService" class="com.reus.tinyioc.step9.OutputServiceImpl">
+        <property name="helloWorldService" ref="helloWorldService"></property>
+    </bean>
+
+    <bean id="helloWorldService" class="com.reus.tinyioc.step9.HelloWorldServiceImpl">
+        <property name="text" value="Hello World!"></property>
+        <property name="outputService" ref="outputService"></property>
+    </bean>
+
+    <bean id="beanInitializeLogger" class="com.reus.tinyioc.step9.BeanInitializeLogger">
+    </bean>
+
+</beans>

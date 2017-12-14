@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="outputService" class="com.reus.tinyioc.step10.OutputServiceImpl">
+    </bean>
+
+    <bean id="helloWorldService" class="com.reus.tinyioc.step10.HelloWorldServiceImpl">
+        <property name="text" value="Hello World!"></property>
+        <property name="outputService" ref="outputService"></property>
+    </bean>
+
+    <bean id="autoProxyCreator" class="com.reus.tinyioc.step10.aop.AspectJAwareAdvisorAutoProxyCreator"></bean>
+
+    <bean id="timeInterceptor" class="com.reus.tinyioc.step10.aop.TimerInterceptor"></bean>
+
+    <bean id="aspectjAspect" class="com.reus.tinyioc.step10.aop.AspectJExpressionPointcutAdvisor">
+        <property name="advice" ref="timeInterceptor"></property>
+        <property name="expression" value="execution(* us.codecraft.tinyioc.*.*(..))"></property>
+    </bean>
+
+</beans>
